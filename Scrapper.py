@@ -155,7 +155,7 @@ def main():
     if len(sys.argv) == 1:
         print("put correct url")
         sys.exit(1)
-<<<<<<< HEAD:project2.py
+
     elif len(sys.argv)==2:
         detailoffirst(sys.argv[1])
 
@@ -169,24 +169,7 @@ def main():
         print(common)
 
     
+
 main()
-=======
-    url = sys.argv[1]
-    response = requests.get(url)
-    if response.status_code == 200:
-        raw_html = response.text
-        soup = BeautifulSoup(raw_html, 'html.parser')
-        if soup.title:
-            print(soup.title.get_text())
-        if soup.body:
-            body_text = soup.body.get_text(separator=' ', strip=True)
-            print(body_text)
-            for link in soup.find_all('a'):
-                address = link.get('href')
-                if address:
-                    print(address)
-    else:
-        print("i Can not fetch page")
-        sys.exit()  
-main()
->>>>>>> 116c9a740b38219d4593102b20f0f4e67b58e480:Scrapper.py
+
+
